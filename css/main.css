@@ -1,0 +1,52 @@
+/************************************************************
+
+Theme name : Business
+Description : A business theme
+Author: Genevieve Masioni
+Author URI : http://genevievemasioni.com
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.0.0
+Tags: business, landing page, full screen
+
+**************************************************************
+
+Table of Contents:
+
+  0. GLOBAL
+  1. HEADER
+  2. MAIN
+
+**************************************************************/
+
+
+/************************************************
+0.	GLOBAL
+************************************************/
+
+:root {
+  --box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+.box-shadow { box-shadow: var(--box-shadow); }
+
+
+.container {
+  max-width: 960px;
+}
+
+.content-region-2 img {
+  width: 100%;
+}
