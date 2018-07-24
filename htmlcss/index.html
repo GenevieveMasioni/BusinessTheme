@@ -13,24 +13,23 @@
   <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-  <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white container" role="menubar">
+  <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white container" role="menubar">
     <h5 class="my-0 mr-md-auto font-weight-normal">Business Company</h5>
     <nav class="my-2 my-md-0 mr-md-3">
-      <a class="p-2 text-dark" href="index.html">Home</a>
+      <a class="p-2 text-dark" href="index.html">Start</a>
       <a class="p-2 text-dark" href="about.html">About</a>
       <a class="p-2 text-dark" href="contact.html">Contact</a>
       <a class="p-2 text-dark" href="blog.html">Blog</a>
     </nav>
   </header>
-  <section class="jumbotron">
+  <section class="jumbotron text-center d-flex align-items-center">
     <div class="container">
       <h1 class="display-3">Hello, world!</h1>
       <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      <p><a class="btn btn-primary btn-lg" href="#start" role="button">Learn more &raquo;</a></p>
     </div>
   </section>
-  <main class="container" role="main">
-
+  <main class="container" role="main" id="start">
     <section class="row my-5">
       <div class="col-md-4 text-center">
         <i class="fas fa-chart-pie fa-2x"></i>
@@ -50,10 +49,10 @@
     </section>
 
     <section class="row my-5 content-region-1 pt50 pb40">
-        <div class="col-md-12">
-          <h1>Clean bootStrap WordPress theme</h1>
-          <p class="lead">Fieri, inquam, Triari, nullo pacto potest, ut non dicas, quid non probes eius, a quo dissentias. quid enim me prohiberet Epicureum esse, si probarem, quae ille diceret? cum praesertim illa perdiscere ludus esset. Quam ob rem dissentientium inter se reprehensiones non sunt vituperandae, maledicta, contumeliae, tum iracundiae, contentiones concertationesque in disputando pertinaces indignae philosophia mihi videri solent.</p>
-        </div>
+      <div class="col-md-12">
+        <h1>Clean bootStrap WordPress theme</h1>
+        <p class="lead">Fieri, inquam, Triari, nullo pacto potest, ut non dicas, quid non probes eius, a quo dissentias. quid enim me prohiberet Epicureum esse, si probarem, quae ille diceret? cum praesertim illa perdiscere ludus esset. Quam ob rem dissentientium inter se reprehensiones non sunt vituperandae, maledicta, contumeliae, tum iracundiae, contentiones concertationesque in disputando pertinaces indignae philosophia mihi videri solent.</p>
+      </div>
     </section>
 
     <section class="row my-5 content-region-2 pt40 pb40">
@@ -122,5 +121,10 @@
   </footer>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  const jumbotron = document.querySelector('.jumbotron');
+  const header = document.querySelector('header');
+  jumbotron.style.height = `${window.innerHeight - header.offsetHeight}px`;
+  </script>
 </body>
 </html>

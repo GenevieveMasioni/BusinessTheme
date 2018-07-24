@@ -47,6 +47,17 @@ html {
   max-width: 960px;
 }
 
+header nav {
+  text-transform: uppercase;
+}
+
+.jumbotron {
+  background: #3f3f3f url("../images/annie-spratt.jpg") no-repeat center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: #fff;
+}
+
 .content-region-2 img {
   width: 100%;
 }
