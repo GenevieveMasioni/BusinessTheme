@@ -63,3 +63,7 @@ html {
 .post .meta li {
   display: inline;
 }
+
+.post .footer a {
+  flex: 1;
+}
