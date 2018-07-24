@@ -50,3 +50,16 @@ html {
 .content-region-2 img {
   width: 100%;
 }
+
+.post > div img {
+  width: 100%;
+}
+
+.post .meta {
+  list-style: none;
+  padding: 0;
+}
+
+.post .meta li {
+  display: inline;
+}
