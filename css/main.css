@@ -65,5 +65,5 @@ html {
 }
 
 .post .footer a {
-  flex: 1;
+  width: 20%;
 }
