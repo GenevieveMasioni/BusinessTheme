@@ -14,11 +14,26 @@
 </head>
 <body <?php body_class(); ?>>
   <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white container" role="menubar">
-    <h5 class="my-0 mr-md-auto font-weight-normal"><?php bloginfo('name'); ?></h5>
+    <?php if(has_custom_logo()) : ?>
+      <?php the_custom_logo(); ?>
+    <?php else: ?>
+      <h5 class="my-0 mr-md-auto font-weight-normal"><?php bloginfo('name'); ?></h5>
+    <?php endif; ?>
     <nav class="my-2 my-md-0 mr-md-3">
       <a class="p-2 text-dark" href="index.html">Start</a>
       <a class="p-2 text-dark" href="about.html">About</a>
       <a class="p-2 text-dark" href="contact.html">Contact</a>
       <a class="p-2 text-dark" href="blog.html">Blog</a>
     </nav>
+
+    <?php
+    wp_nav_menu(array(
+      'theme_location' => 'primary',
+      'depth' => 2,
+      'container' => false,
+      'menu_class' => 'my-2 my-md-0 mr-md-3',
+      'fallback' => 'wp_bootstrap_navwalker::fallback',
+      'walker' => new wp_bootstrap_navwalker()
+    ));
+     ?>
   </header>
