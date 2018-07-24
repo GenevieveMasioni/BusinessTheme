@@ -14,8 +14,11 @@ Tags: business, landing page, full screen
 Table of Contents:
 
   0. GLOBAL
-  1. HEADER
-  2. MAIN
+  1. LAYOUT
+  2. HEADER
+  3. JUMBOTRON
+  4. HOME WIDGETS
+  5. POSTS
 
 **************************************************************/
 
@@ -39,6 +42,10 @@ html {
   }
 }
 
+/************************************************
+1.	LAYOUT
+************************************************/
+
 .border-top { border-top: 1px solid #e5e5e5; }
 .border-bottom { border-bottom: 1px solid #e5e5e5; }
 .box-shadow { box-shadow: var(--box-shadow); }
@@ -47,9 +54,17 @@ html {
   max-width: 960px;
 }
 
+/************************************************
+2.	HEADER
+************************************************/
+
 header nav {
   text-transform: uppercase;
 }
+
+/************************************************
+3.	JUMBOTRON
+************************************************/
 
 .jumbotron {
   background: #3f3f3f url("../images/annie-spratt.jpg") no-repeat center;
@@ -58,9 +73,17 @@ header nav {
   color: #fff;
 }
 
+/************************************************
+4.	HOME WIDGETS
+************************************************/
+
 .content-region-2 img {
   width: 100%;
 }
+
+/************************************************
+5.	POSTS
+************************************************/
 
 .post > div img {
   width: 100%;
