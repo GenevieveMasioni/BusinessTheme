@@ -87,6 +87,54 @@ function business_customize_register($wp_customize) {
     'section' => 'banner',
     'settings' => 'banner_image'
   )));
+
+  // Boxes section
+  $wp_customize -> add_section('boxes', array(
+    'title'         => __('Boxes', 'business'),
+    'description'   => sprintf(__('Options for homepage boxes', 'business')),
+    'priority'      => 130
+  ));
+
+  // BOX 1
+  // Box 1 heading setting
+  $wp_customize->add_setting('box1_heading', array(
+    'default'     => _x('Box 1 Heading', 'business'),
+    'type'        => 'theme_mod'
+  ));
+
+  // Heading control
+  $wp_customize->add_control('box1_heading', array(
+    'label'       => __('Box 1 Heading', 'business'),
+    'section'     => 'boxes',
+    'priority'    => 20
+  ));
+
+  // Text setting
+  $wp_customize->add_setting('box1_text', array(
+    'default'     => _x('Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.',
+    'business'),
+    'type'        => 'theme_mod'
+  ));
+
+  // Box 1 text control
+  $wp_customize->add_control('box1_text', array(
+    'label'       => __('Box 1 heading ', 'business'),
+    'section'     => 'boxes',
+    'priority'    => 20
+  ));
+
+  // Box 1 Icon setting
+  $wp_customize->add_setting('box1_icon', array(
+    'default' => _x('chart-pie', 'business'),
+    'type' => 'theme_mod',
+  ));
+
+  // Box 1 Icon control
+  $wp_customize->add_control('box1_icon', array(
+    'default' => __('Box 1 Icon', 'business'),
+    'section' => 'boxes',
+    'priority' => 20
+  ));
 }
 
 add_action('customize_register', 'business_customize_register');
