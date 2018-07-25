@@ -135,6 +135,88 @@ function business_customize_register($wp_customize) {
     'section' => 'boxes',
     'priority' => 20
   ));
+
+  // BOX 2
+  // Box 2 heading setting
+  $wp_customize->add_setting('box2_heading', array(
+    'default'     => _x('Box 2 Heading', 'business'),
+    'type'        => 'theme_mod'
+  ));
+
+  // Box 2 Heading control
+  $wp_customize->add_control('box2_heading', array(
+    'label'       => __('Box 2 Heading', 'business'),
+    'section'     => 'boxes',
+    'priority'    => 20
+  ));
+
+  // Box 2 Text setting
+  $wp_customize->add_setting('box2_text', array(
+    'default'     => _x('Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.',
+    'business'),
+    'type'        => 'theme_mod'
+  ));
+
+  // Box 2 text control
+  $wp_customize->add_control('box2_text', array(
+    'label'       => __('Box 2 heading ', 'business'),
+    'section'     => 'boxes',
+    'priority'    => 20
+  ));
+
+  // Box 2 Icon setting
+  $wp_customize->add_setting('box2_icon', array(
+    'default' => _x('chart-pie', 'business'),
+    'type' => 'theme_mod',
+  ));
+
+  // Box 2 Icon control
+  $wp_customize->add_control('box2_icon', array(
+    'default' => __('Box 2 Icon', 'business'),
+    'section' => 'boxes',
+    'priority' => 20
+  ));
+
+  // BOX 3
+  // Box 3 heading setting
+  $wp_customize->add_setting('box3_heading', array(
+    'default'     => _x('Box 3 Heading', 'business'),
+    'type'        => 'theme_mod'
+  ));
+
+  // Box 3 Heading control
+  $wp_customize->add_control('box3_heading', array(
+    'label'       => __('Box 3 Heading', 'business'),
+    'section'     => 'boxes',
+    'priority'    => 20
+  ));
+
+  // Box 3 Text setting
+  $wp_customize->add_setting('box3_text', array(
+    'default'     => _x('Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.',
+    'business'),
+    'type'        => 'theme_mod'
+  ));
+
+  // Box 3 text control
+  $wp_customize->add_control('box3_text', array(
+    'label'       => __('Box 3 heading ', 'business'),
+    'section'     => 'boxes',
+    'priority'    => 20
+  ));
+
+  // Box 3 Icon setting
+  $wp_customize->add_setting('box3_icon', array(
+    'default' => _x('chart-pie', 'business'),
+    'type' => 'theme_mod',
+  ));
+
+  // Box 3 Icon control
+  $wp_customize->add_control('box3_icon', array(
+    'default' => __('Box 3 Icon', 'business'),
+    'section' => 'boxes',
+    'priority' => 20
+  ));
 }
 
 add_action('customize_register', 'business_customize_register');
