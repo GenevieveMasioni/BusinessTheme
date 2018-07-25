@@ -1,5 +1,4 @@
-<!-- include inc/header.php -->
-<?php include_once('inc/header.php'); ?>
+<?php get_header(); ?>
   <section class="jumbotron text-center d-flex align-items-center">
     <div class="container">
       <h1 class="display-3">Hello, world!</h1>
@@ -61,4 +60,4 @@
     </section>
   </main>
 
-<!-- include inc/footer.php -->
+<?php get_footer(); ?>
