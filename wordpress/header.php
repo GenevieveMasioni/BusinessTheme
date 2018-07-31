@@ -1,5 +1,5 @@
 <!doctype html>
-<html <?php language(); ?>>
+<html <?php language_attributes(); ?>>
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,6 +11,12 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
   <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
   <?php wp_head(); ?>
+  <style>
+  .jumbotron {
+    background-image: url(<?php echo get_theme_mod('banner_image',
+    get_bloginfo('template_url').'/images/banner.jpg'); ?>);
+  }
+  </style>
 </head>
 <body <?php body_class(); ?>>
   <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white container" role="menubar">
@@ -19,13 +25,6 @@
     <?php else: ?>
       <h5 class="my-0 mr-md-auto font-weight-normal"><?php bloginfo('name'); ?></h5>
     <?php endif; ?>
-    <nav class="my-2 my-md-0 mr-md-3">
-      <a class="p-2 text-dark" href="index.html">Start</a>
-      <a class="p-2 text-dark" href="about.html">About</a>
-      <a class="p-2 text-dark" href="contact.html">Contact</a>
-      <a class="p-2 text-dark" href="blog.html">Blog</a>
-    </nav>
-
     <?php
     wp_nav_menu(array(
       'theme_location' => 'primary',

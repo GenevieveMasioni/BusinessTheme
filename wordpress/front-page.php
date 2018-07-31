@@ -34,7 +34,7 @@
 
     <section class="row my-5 content-region-2 pt40 pb40">
       <div class="col-md-5">
-        <img src="images/chatting.jpg" alt="People chatting">
+        <img src="<?php bloginfo('template_url'); ?>/images/chatting.jpg" alt="People chatting">
       </div>
       <div class="col-md-7">
         <h3>Theme features</h3>

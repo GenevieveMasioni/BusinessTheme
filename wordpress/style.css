@@ -58,8 +58,14 @@ html {
 2.	HEADER
 ************************************************/
 
-header nav {
+header #menu-header {
+  list-style: none;
+  padding: 0;
   text-transform: uppercase;
+}
+
+#menu-header > *, .nav-link {
+  display: inline;
 }
 
 /************************************************
@@ -67,7 +73,7 @@ header nav {
 ************************************************/
 
 .jumbotron {
-  background: #3f3f3f url("../images/annie-spratt.jpg") no-repeat center;
+  background: #3f3f3f url("../images/banner.jpg") no-repeat center;
   background-size: cover;
   background-blend-mode: overlay;
   color: #fff;

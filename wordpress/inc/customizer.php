@@ -57,7 +57,7 @@ function business_customize_register($wp_customize) {
 
   // Button URL control
   $wp_customize->add_control('banner_btn_url', array(
-    'label'       => __('Button text', 'business'),
+    'label'       => __('Button url', 'business'),
     'section'     => 'banner',
     'priority'    => 20
   ));
@@ -105,7 +105,7 @@ function business_customize_register($wp_customize) {
 
   // Box 1 text control
   $wp_customize->add_control('box1_text', array(
-    'label'       => __('Box 1 heading ', 'business'),
+    'label'       => __('Box 1 Description', 'business'),
     'section'     => 'boxes',
     'priority'    => 20
   ));
@@ -118,7 +118,8 @@ function business_customize_register($wp_customize) {
 
   // Box 1 Icon control
   $wp_customize->add_control('box1_icon', array(
-    'default' => __('Box 1 Icon', 'business'),
+    'label'   => __('Box 1 icon', 'business'),
+    'default' => __('chart-pie', 'business'),
     'section' => 'boxes',
     'priority' => 20
   ));
@@ -146,7 +147,7 @@ function business_customize_register($wp_customize) {
 
   // Box 2 text control
   $wp_customize->add_control('box2_text', array(
-    'label'       => __('Box 2 heading ', 'business'),
+    'label'       => __('Box 2 description', 'business'),
     'section'     => 'boxes',
     'priority'    => 20
   ));
@@ -159,7 +160,8 @@ function business_customize_register($wp_customize) {
 
   // Box 2 Icon control
   $wp_customize->add_control('box2_icon', array(
-    'default' => __('Box 2 Icon', 'business'),
+    'label'   => __('Box 2 icon', 'business'),
+    'default' => __('code', 'business'),
     'section' => 'boxes',
     'priority' => 20
   ));
@@ -187,7 +189,7 @@ function business_customize_register($wp_customize) {
 
   // Box 3 text control
   $wp_customize->add_control('box3_text', array(
-    'label'       => __('Box 3 heading ', 'business'),
+    'label'       => __('Box 3 description ', 'business'),
     'section'     => 'boxes',
     'priority'    => 20
   ));
@@ -200,7 +202,8 @@ function business_customize_register($wp_customize) {
 
   // Box 3 Icon control
   $wp_customize->add_control('box3_icon', array(
-    'default' => __('Box 3 Icon', 'business'),
+    'label'   => __('Box 3 icon', 'business'),
+    'default' => __('desktop', 'business'),
     'section' => 'boxes',
     'priority' => 20
   ));
