@@ -44,10 +44,7 @@
                     ?>
                   </li>
                 </ul>
-                <p><?php the_excerpt(); ?></p>
-                <a href="<?php the_permalink(); ?>" class="btn btn-primary btn-block">
-                  <?php echo __('Read More'); ?>
-                </a>
+                <?php the_content(); ?>
               </div>
             </article>
           <?php endwhile; ?>

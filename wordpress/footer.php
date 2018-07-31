@@ -23,8 +23,9 @@
 <script type="text/javascript">
 const jumbotron = document.querySelector('.jumbotron');
 const header = document.querySelector('header');
-jumbotron.style.height = `${window.innerHeight - header.offsetHeight}px`;
-
+if(jumbotron != null) {
+  jumbotron.style.height = `${window.innerHeight - header.offsetHeight}px`;
+}
 const wp_headerMenu = document.querySelectorAll('.nav-link');
 wp_headerMenu.forEach((el) => el.classList.add('p-2', 'text-dark'));
 </script>

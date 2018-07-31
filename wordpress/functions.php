@@ -11,8 +11,6 @@ function business_setup() {
   register_nav_menus(array(
     'primary'   => __('Primary menu')
   ));
-
-
 }
 
 add_action('after_setup_theme', 'business_setup');
@@ -80,8 +78,8 @@ function init_widgets($id) {
     'id'      => 'sidebar',
     'before_widget' => '<div class="panel panel-default sidebar-widget">',
     'after_widget' => '</div></div>',
-    'before_title' => '<div class="panel-heading"><h3 class="panel-title">',
-    'after_title' => '</h3></div><div class="panel-body">'
+    'before_title' => '<div class="panel-heading"><h5 class="panel-title">',
+    'after_title' => '</h5></div><div class="panel-body">'
   ));
 }
 
