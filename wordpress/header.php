@@ -7,7 +7,8 @@
   <meta name="author" content="<?php bloginfo('author'); ?>">
   <link rel="icon" href="../../../../favicon.ico">
   <title><?php bloginfo('name'); ?></title>
-  <link href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
   <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
   <?php wp_head(); ?>
