@@ -32,6 +32,42 @@ function init_widgets($id) {
     'before_title' => '<h2>',
     'after_title' => '</h2>'
   ));
+
+  register_sidebar(array(
+    'name'    => 'Footer widget 1',
+    'id'      => 'footer-widget-1',
+    'before_widget' => '<div class="col-6 col-md">',
+    'after_widget' => '</div>',
+    'before_title' => '<h5>',
+    'after_title' => '</h5>'
+  ));
+
+  register_sidebar(array(
+    'name'    => 'Footer widget 2',
+    'id'      => 'footer-widget-2',
+    'before_widget' => '<div class="col-6 col-md">',
+    'after_widget' => '</div>',
+    'before_title' => '<h5>',
+    'after_title' => '</h5>'
+  ));
+
+  register_sidebar(array(
+    'name'    => 'Footer widget 3',
+    'id'      => 'footer-widget-3',
+    'before_widget' => '<div class="col-6 col-md">',
+    'after_widget' => '</div>',
+    'before_title' => '<h5>',
+    'after_title' => '</h5>'
+  ));
+
+  register_sidebar(array(
+    'name'    => 'Footer widget 4',
+    'id'      => 'footer-widget-4',
+    'before_widget' => '<div class="col-6 col-md">',
+    'after_widget' => '</div>',
+    'before_title' => '<h5>',
+    'after_title' => '</h5>'
+  ));
 }
 
 // Widget
