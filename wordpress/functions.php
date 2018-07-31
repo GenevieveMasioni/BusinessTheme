@@ -4,9 +4,15 @@ require_once('wp_bootstrap_navwalker.php');
 
 // Theme support
 function business_setup() {
+  // Custom logo
+  add_theme_support('custom-logo');
+  // featured image
+  add_theme_support('post-thumbnails');
   register_nav_menus(array(
     'primary'   => __('Primary menu')
   ));
+
+
 }
 
 add_action('after_setup_theme', 'business_setup');
@@ -67,6 +73,15 @@ function init_widgets($id) {
     'after_widget' => '</div>',
     'before_title' => '<h5>',
     'after_title' => '</h5>'
+  ));
+
+  register_sidebar(array(
+    'name'    => 'Sidebar',
+    'id'      => 'sidebar',
+    'before_widget' => '<div class="panel panel-default sidebar-widget">',
+    'after_widget' => '</div></div>',
+    'before_title' => '<div class="panel-heading"><h3 class="panel-title">',
+    'after_title' => '</h3></div><div class="panel-body">'
   ));
 }
 

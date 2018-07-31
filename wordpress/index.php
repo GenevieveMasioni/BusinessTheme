@@ -1,63 +1,63 @@
 <?php get_header(); ?>
-  <section class="jumbotron text-center d-flex align-items-center">
-    <div class="container">
-      <h1 class="display-3">Hello, world!</h1>
-      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-      <p><a class="btn btn-primary btn-lg" href="#start" role="button">Learn more &raquo;</a></p>
+<main class="container" role="main">
+  <section class="row my-5 title-bar">
+    <div class="col-md-12">
+      <h1><?php echo __('Blog'); ?></h1>
     </div>
   </section>
-  <main class="container" role="main" id="start">
-    <section class="row my-5">
-      <div class="col-md-4 text-center">
-        <i class="fas fa-chart-pie fa-2x"></i>
-        <h2 class="my-4 font-weight-normal">Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      </div>
-      <div class="col-md-4 text-center">
-        <i class="fas fa-code fa-2x"></i>
-        <h2 class="my-4 font-weight-normal">Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      </div>
-      <div class="col-md-4 text-center">
-        <i class="fas fa-desktop fa-2x"></i>
-        <h2 class="my-4 font-weight-normal">Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-      </div>
-    </section>
 
-    <section class="row my-5 content-region-1 pt50 pb40">
-      <div class="col-md-12">
-        <h1>Clean bootStrap WordPress theme</h1>
-        <p class="lead">Fieri, inquam, Triari, nullo pacto potest, ut non dicas, quid non probes eius, a quo dissentias. quid enim me prohiberet Epicureum esse, si probarem, quae ille diceret? cum praesertim illa perdiscere ludus esset. Quam ob rem dissentientium inter se reprehensiones non sunt vituperandae, maledicta, contumeliae, tum iracundiae, contentiones concertationesque in disputando pertinaces indignae philosophia mihi videri solent.</p>
-      </div>
-    </section>
+  <section class="row my-5 marketing">
 
-    <section class="row my-5 content-region-2 pt40 pb40">
-      <div class="col-md-5">
-        <img src="images/banner.jpg" alt="People chatting">
+    <?php if(is_active_sidebar('sidebar')) : ?>
+      <div class="col-md-8">
+      <?php else : ?>
+        <div class="col-md-12">
+        <?php endif; ?>
+        <?php if(have_posts()) : ?>
+          <?php while(have_posts()) : the_post(); ?>
+            <article class="post mb-5">
+              <div class="thumbnail">
+                <?php if(has_post_thumbnail()) : ?>
+                  <?php the_post_thumbnail(); ?>
+                <?php endif; ?>
+              </div>
+              <div class="content">
+                <h3 class="my-3"><?php the_title(); ?></h3>
+                <ul class="meta">
+                  <li>By <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>">
+                    <?php the_author(); ?></a>
+                  </li>
+                  <li><?php the_time('F j, Y'); ?></li>
+                  <li>in
+                    <?php
+                    $categories = get_the_category();
+                    $separator = ", ";
+                    $output = '';
+
+                    if($categories) {
+                      forEach($categories as $category) {
+                        $output .= '<a href="'.get_category_link($category
+                        ->term_id).'">'.$category->cat_name .'</a>'. $separator;
+                      }
+                    }
+                    echo trim($output, $separator);
+                    ?>
+                  </li>
+                </ul>
+                <p><?php the_excerpt(); ?></p>
+                <a href="<?php the_permalink(); ?>" class="btn btn-primary btn-block">
+                  <?php echo __('Read More'); ?>
+                </a>
+              </div>
+            </article>
+          <?php endwhile; ?>
+        <?php endif; ?>
       </div>
-      <div class="col-md-7">
-        <h3>Theme features</h3>
-        <ul class="list-group">
-          <li class="list-group-item">
-            <i class="fas fa-check" aria-hidden="true"></i>
-            Clean code
-          </li>
-          <li class="list-group-item">
-            <i class="fas fa-check" aria-hidden="true"></i>
-            Custom showcase area
-          </li>
-          <li class="list-group-item">
-            <i class="fas fa-check" aria-hidden="true"></i>
-            BootStrap framework
-          </li>
-          <li class="list-group-item">
-            <i class="fas fa-check" aria-hidden="true"></i>
-            Multiple color choices
-          </li>
-        </ul>
-      </div>
+
+      <?php if(is_active_sidebar('sidebar')) : ?>
+        <?php dynamic_sidebar('sidebar') ?>
+      <?php endif; ?>
     </section>
   </main>
 
-<?php get_footer(); ?>
+  <?php get_footer(); ?>
