@@ -89,14 +89,14 @@ function business_customize_register($wp_customize) {
     'type'        => 'theme_mod'
   ));
 
-  // Heading control
+  // Box 1 Heading control
   $wp_customize->add_control('box1_heading', array(
     'label'       => __('Box 1 Heading', 'business'),
     'section'     => 'boxes',
     'priority'    => 20
   ));
 
-  // Text setting
+  // Box 1 Text setting
   $wp_customize->add_setting('box1_text', array(
     'default'     => _x('Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.',
     'business'),

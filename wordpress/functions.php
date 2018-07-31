@@ -1,6 +1,6 @@
 <?php
 
-require_once('wp_bootstrap_navwalker.php')
+require_once('wp_bootstrap_navwalker.php');
 
 // Theme support
 function business_setup() {
