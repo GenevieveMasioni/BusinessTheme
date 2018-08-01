@@ -1,4 +1,4 @@
-<section class="comments">
+<section class="comments border-top">
   <h4 class="my-4">Comments</h4>
   <?php $args = array(
   'id_form'           => 'commentform',
