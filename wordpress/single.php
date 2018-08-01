@@ -49,6 +49,7 @@
             </article>
           <?php endwhile; ?>
         <?php endif; ?>
+        <?php comments_template(); ?>
       </div>
 
       <?php if(is_active_sidebar('sidebar')) : ?>
