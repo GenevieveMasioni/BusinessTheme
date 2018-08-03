@@ -56,7 +56,7 @@
 
       <?php if(is_active_sidebar('sidebar')) : ?>
         <div class="col-md-3">
-        <?php dynamic_sidebar('sidebar') ?>
+        <?php dynamic_sidebar('sidebar'); ?>
       </div>
       <?php endif; ?>
     </section>
